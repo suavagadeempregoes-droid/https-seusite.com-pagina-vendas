@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículos Irresistíveis com IA - Método Dominância ATS™</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #0A1F3D 0%, #0F3D91 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        header .subtitle {
+            font-size: 1.3em;
+            color: #FFD700;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        header .badge {
+            display: inline-block;
+            background: #00A651;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border: 2px solid #FFD700;
+        }
+        
+        .section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            color: #0A1F3D;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #FFD700;
+            padding-bottom: 10px;
+        }
+        
+        .section h3 {
+            color: #0F3D91;
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+        
+        .problem-box {
+            background: #fff3cd;
+            border-left: 5px solid #ff6b6b;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .solution-box {
+            background: #d4edda;
+            border-left: 5px solid #00A651;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .benefit-item {
+            background: #f0f7ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #0F3D91;
+        }
+        
+        .benefit-item h4 {
+            color: #0F3D91;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .bonus-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .bonus-list li {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #FFD700;
+            font-weight: 500;
+        }
+        
+        .bonus-list li strong {
+            color: #0F3D91;
+        }
+        
+        .testimonial {
+            background: #f0f7ff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid #0F3D91;
+            font-style: italic;
+        }
+        
+        .testimonial .author {
+            font-weight: bold;
+            color: #0F3D91;
+            margin-top: 10px;
+            font-style: normal;
+        }
+        
+        .pricing-box {
+            background: linear-gradient(135deg, #0A1F3D 0%, #0F3D91 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .pricing-box .original-price {
+            font-size: 1.2em;
+            text-decoration: line-through;
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-box .final-price {
+            font-size: 3em;
+            font-weight: 700;
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-box .price-description {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #00A651 0%, #008c3a 100%);
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 15px 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 166, 81, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: linear-gradient(135deg, #008c3a 0%, #006b2e 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 166, 81, 0.4);
+        }
+        
+        .cta-button.secondary {
+            background: linear-gradient(135deg, #0F3D91 0%, #0A1F3D 100%);
+            box-shadow: 0 5px 15px rgba(15, 61, 145, 0.3);
+        }
+        
+        .cta-button.secondary:hover {
+            background: linear-gradient(135deg, #0A1F3D 0%, #051a2a 100%);
+            box-shadow: 0 8px 20px rgba(15, 61, 145, 0.4);
+        }
+        
+        .guarantee-box {
+            background: #fff3cd;
+            border: 2px solid #FFD700;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .guarantee-box h3 {
+            color: #0A1F3D;
+            margin-bottom: 15px;
+        }
+        
+        .guarantee-box .guarantee-badge {
+            display: inline-block;
+            background: #00A651;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        
+        .faq {
+            margin: 30px 0;
+        }
+        
+        .faq-item {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #0F3D91;
+        }
+        
+        .faq-item h4 {
+            color: #0F3D91;
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        .faq-item p {
+            color: #555;
+            margin-bottom: 0;
+        }
+        
+        .center-text {
+            text-align: center;
+        }
+        
+        .button-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            header .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-box .final-price {
+                font-size: 2.2em;
+            }
+            
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="badge">✓ APROVADO ATS</div>
+            <h1>Currículos Irresistíveis com IA</h1>
+            <p class="subtitle">Passe pelo robô das empresas e chegue ao recrutador real em 2026</p>
+            <p style="font-size: 1.1em; margin-top: 20px;">O método que 70% dos candidatos não conhecem (e que te coloca à frente deles)</p>
+        </header>
+        
+        <!-- O Problema -->
+        <section class="section">
+            <h2>O Problema Real: Por Que Seus Currículos Desaparecem</h2>
+            
+            <div class="problem-box">
+                <strong>Você envia 10 currículos...</strong><br>
+                Nenhuma resposta. Silêncio total. Como se tivesse caído em um buraco negro.
+            </div>
+            
+            <p>A verdade que ninguém quer contar é simples: <strong>seu currículo não está sendo lido por um humano</strong>.</p>
+            
+            <p>Antes de qualquer recrutador colocar os olhos no seu perfil, ele passa por um filtro invisível chamado <strong>ATS (Applicant Tracking System)</strong> — um robô que analisa, pontua e rejeita currículos em milissegundos.</p>
+            
+            <p>E os números são brutais: <strong>70% a 75% dos currículos são eliminados pelo ATS</strong> antes mesmo de um olho humano vê-los.</p>
+            
+            <p>Você pode ser o profissional perfeito para a vaga. Pode ter exatamente as habilidades que a empresa procura. Mas se seu currículo não "fala a língua" do robô, você nunca chegará ao recrutador.</p>
+            
+            <p>É como bater em uma porta fechada. Você bate, bate, bate... mas ninguém abre.</p>
+        </section>
+        
+        <!-- A Solução -->
+        <section class="section">
+            <h2>A Solução: Método Dominância ATS™</h2>
+            
+            <div class="solution-box">
+                <strong>E se você pudesse fazer o robô trabalhar a seu favor?</strong><br>
+                E se seu currículo não apenas passasse pelo ATS, mas brilhasse para o recrutador humano?
+            </div>
+            
+            <p>Apresentamos o <strong>Método Dominância ATS™</strong> — um sistema comprovado que desvenda a mente do robô e a psicologia do recrutador, transformando seu currículo em uma máquina de entrevistas.</p>
+            
+            <p>Este método é baseado em 3 pilares:</p>
+            
+            <div class="benefits">
+                <div class="benefit-item">
+                    <h4>🤖 Engenharia de IA</h4>
+                    <p>Aprenda a usar Inteligência Artificial para otimizar cada palavra do seu currículo, garantindo que o ATS o classifique como um candidato de topo.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>🎯 Estratégia de Palavras-Chave</h4>
+                    <p>Descubra as palavras-chave secretas que cada vaga procura e como distribuí-las naturalmente no seu currículo.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>👥 Psicologia do Recrutador</h4>
+                    <p>Entenda como os recrutadores realmente pensam, o que os atrai em 6 segundos e como posicionar seu perfil para capturar essa atenção.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>📊 Método A.R.T.E.™</h4>
+                    <p>Um sistema de 4 etapas (Análise, Refinamento, Templates, Execução) que garante resultados comprovados e replicáveis.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- O Que Você Vai Receber -->
+        <section class="section">
+            <h2>O Que Você Vai Receber</h2>
+            
+            <h3>📖 eBook Principal: "Currículos Irresistíveis com IA"</h3>
+            <p>Um guia completo de 90+ páginas que cobre:</p>
+            <ul class="bonus-list">
+                <li><strong>Capítulo 1:</strong> Como funcionam os 6 principais sistemas ATS modernos</li>
+                <li><strong>Capítulo 2:</strong> Os 12 erros estruturais que fazem currículos serem rejeitados</li>
+                <li><strong>Capítulo 3:</strong> Método A.R.T.E.™ — O sistema passo a passo</li>
+                <li><strong>Capítulo 4:</strong> 150+ Prompts de IA prontos para usar</li>
+                <li><strong>Capítulo 5:</strong> Templates de currículo 100% ATS-compatible</li>
+                <li><strong>Capítulo 6:</strong> Plano de 30 dias para recolocação profissional</li>
+            </ul>
+            
+            <h3>🎁 Bônus Exclusivos</h3>
+            <ul class="bonus-list">
+                <li><strong>Bônus 1:</strong> Biblioteca com 150 Prompts de IA para Currículos (PDF)</li>
+                <li><strong>Bônus 2:</strong> 5 Templates de Currículo Editáveis em DOCX (100% ATS-friendly)</li>
+                <li><strong>Bônus 3:</strong> Checklist ATS com 25 Pontos de Validação (PDF)</li>
+                <li><strong>Bônus 4:</strong> Planilha Rastreadora de Vagas (para organizar suas candidaturas)</li>
+            </ul>
+        </section>
+        
+        <!-- Prova Social -->
+        <section class="section">
+            <h2>Resultados Reais de Candidatos</h2>
+            
+            <div class="testimonial">
+                "Em 10 dias, recebi 3 convites para entrevista! Aplicava o Método A.R.T.E.™ para cada vaga e os resultados foram imediatos. Agora estou na vaga dos meus sonhos."
+                <div class="author">— Marina, Analista de Dados</div>
+            </div>
+            
+            <div class="testimonial">
+                "Achava que sabia tudo sobre currículos. Até conhecer os prompts de IA. Transformaram completamente minha abordagem. Game-changer!"
+                <div class="author">— Carlos, Desenvolvedor Front-end</div>
+            </div>
+            
+            <div class="testimonial">
+                "De currículo invisível a entrevistas em tempo recorde. O método realmente funciona. Estou muito grato!"
+                <div class="author">— Ana, Gerente de Projetos</div>
+            </div>
+        </section>
+        
+        <!-- Oferta e Preço -->
+        <section class="section center-text">
+            <h2>Sua Oferta Especial (Apenas Hoje)</h2>
+            
+            <p style="font-size: 1.2em; margin: 20px 0;">Normalmente, este guia completo com todos os bônus custa <strong>R$ 127,00</strong>.</p>
+            
+            <div class="pricing-box">
+                <div class="original-price">De: R$ 127,00</div>
+                <div class="final-price">R$ 67,00</div>
+                <div class="price-description">Apenas hoje, para os primeiros 50 candidatos</div>
+            </div>
+            
+            <p style="font-size: 1.1em; color: #ff6b6b; font-weight: bold;">Isso é menos de R$ 2 por página de conteúdo estratégico que pode mudar sua carreira.</p>
+            
+            <div class="button-group">
+                <a href="#checkout" class="cta-button">SIM! QUERO MEUS CURRÍCULOS IRRESISTÍVEIS POR R$ 67</a>
+            </div>
+        </section>
+        
+        <!-- Garantia -->
+        <section class="section">
+            <div class="guarantee-box">
+                <h3>🛡️ Garantia de 7 Dias</h3>
+                <p>Se por qualquer motivo você não estiver 100% satisfeito com o conteúdo, devolveremos cada centavo do seu dinheiro. Sem perguntas, sem burocracia.</p>
+                <p>Você não tem nada a perder. Apenas uma carreira transformada a ganhar.</p>
+                <div class="guarantee-badge">✓ Risco Zero</div>
+            </div>
+        </section>
+        
+        <!-- FAQ -->
+        <section class="section">
+            <h2>Perguntas Frequentes</h2>
+            
+            <div class="faq">
+                <div class="faq-item">
+                    <h4>❓ Para quem é este guia?</h4>
+                    <p>Para qualquer profissional que está buscando emprego e quer passar pelo ATS. Desde iniciantes até executivos. O método funciona para todas as áreas e níveis de senioridade.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>❓ Preciso de conhecimento técnico?</h4>
+                    <p>Não! O guia é feito para iniciantes. Explicamos tudo passo a passo, sem jargões desnecessários. Se você consegue usar o Word e o ChatGPT, você consegue aplicar o método.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>❓ Quanto tempo leva para ver resultados?</h4>
+                    <p>Muitos candidatos relatam resultados em 7-10 dias. Mas tudo depende de você aplicar o método consistentemente. O plano de 30 dias no eBook é o mais eficaz.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>❓ Os templates funcionam com todos os ATS?</h4>
+                    <p>Sim! Os templates foram testados com os 6 principais sistemas ATS: Gupy, Workday, Greenhouse, Lever, SAP e TOTVS. Eles funcionam com todos.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>❓ Posso usar o guia para múltiplas vagas?</h4>
+                    <p>Absolutamente! O método é replicável. Use-o para cada vaga que se alinhe com seu perfil. Quanto mais você praticar, melhores serão seus resultados.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Chamada Final -->
+        <section class="section center-text">
+            <h2>Não Deixe Essa Oportunidade Passar</h2>
+            
+            <p style="font-size: 1.2em; margin: 20px 0;">O mercado de trabalho não espera. As melhores vagas não esperam. E a sua transformação começa agora.</p>
+            
+            <p style="font-size: 1.1em; color: #0F3D91; font-weight: bold; margin: 20px 0;">Clique no botão abaixo e garanta seu acesso ao Método Dominância ATS™ por apenas R$ 67.</p>
+            
+            <div class="button-group">
+                <a href="#checkout" class="cta-button">COMPRAR AGORA - R$ 67</a>
+                <a href="#" class="cta-button secondary">SABER MAIS</a>
+            </div>
+            
+            <p style="margin-top: 30px; color: #666; font-size: 0.95em;">Acesso imediato após a compra. Suporte por e-mail disponível.</p>
+        </section>
+        
+        <!-- Rodapé -->
+        <footer style="text-align: center; padding: 30px 0; color: #666; font-size: 0.9em; border-top: 1px solid #ddd; margin-top: 40px;">
+            <p>© 2026 Método Dominância ATS™. Todos os direitos reservados.</p>
+            <p>Material licenciado para uso pessoal. Proibida reprodução ou redistribuição sem autorização.</p>
+        </footer>
+    </div>
+</body>
+</html>

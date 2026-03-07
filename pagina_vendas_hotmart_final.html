@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículos Irresistíveis com IA - Método Dominância ATS™ | Sua Vaga dos Sonhos Começa Aqui!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0A1F3D;
+            --primary-blue: #0F3D91;
+            --accent-yellow: #FFD700;
+            --accent-green: #00A651;
+            --text-light: #f8f9fa;
+            --text-dark: #333;
+            --text-gray: #666;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-light);
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 100%);
+            color: var(--text-light);
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1500x400?text=Capa+Ebook+IA') no-repeat center center/cover;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        header .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        header .badge-top {
+            display: inline-block;
+            background: var(--accent-green);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            box-shadow: 0 2px 10px rgba(0, 166, 81, 0.4);
+        }
+
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            line-height: 1.2;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        header .subheadline {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5em;
+            color: var(--accent-yellow);
+            margin-bottom: 25px;
+            font-weight: 600;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        header .promise {
+            font-size: 1.1em;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-weight: 400;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-green) 0%, #008c3a 100%);
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 166, 81, 0.3);
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(135deg, #008c3a 0%, #006b2e 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 166, 81, 0.4);
+        }
+
+        /* Sections */
+        .section {
+            background: var(--bg-white);
+            padding: 50px 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .section h2 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-dark);
+            font-size: 2em;
+            margin-bottom: 25px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent-yellow);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-blue);
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+
+        .highlight-box {
+            background: #e6f7ff;
+            border-left: 5px solid var(--primary-blue);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-style: italic;
+            color: var(--primary-dark);
+        }
+
+        .highlight-box strong {
+            color: var(--primary-blue);
+        }
+
+        .problem-list li {
+            margin-bottom: 10px;
+            list-style: none;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .problem-list li::before {
+            content: '❌';
+            position: absolute;
+            left: 0;
+            color: #ff6b6b;
+        }
+
+        .solution-list li {
+            margin-bottom: 10px;
+            list-style: none;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .solution-list li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            color: var(--accent-green);
+        }
+
+        .method-arte {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .arte-step {
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border-top: 5px solid var(--accent-yellow);
+        }
+
+        .arte-step h4 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-blue);
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .arte-step p {
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .benefit-card {
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid var(--accent-green);
+        }
+
+        .benefit-card h4 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--accent-green);
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .bonus-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%);
+            color: var(--text-light);
+            padding: 50px 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .bonus-section h2 {
+            color: var(--accent-yellow);
+            margin-bottom: 20px;
+        }
+
+        .bonus-section h2::after {
+            background: var(--text-light);
+        }
+
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .bonus-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: left;
+        }
+
+        .bonus-card h4 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--accent-yellow);
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .bonus-card p {
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .bonus-value {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: var(--accent-green);
+            margin-top: 15px;
+        }
+
+        .total-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--accent-yellow);
+            margin-top: 30px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid var(--accent-yellow);
+            font-style: italic;
+            color: var(--text-gray);
+        }
+
+        .testimonial-card .author {
+            font-weight: bold;
+            color: var(--primary-blue);
+            margin-top: 15px;
+            display: block;
+            font-style: normal;
+        }
+
+        .objection-section {
+            background: var(--bg-white);
+            padding: 50px 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .objection-item {
+            margin-bottom: 20px;
+        }
+
+        .objection-item h4 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-dark);
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .objection-item h4::before {
+            content: '❓';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .guarantee-box {
+            background: #fff3cd;
+            border: 2px solid var(--accent-yellow);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 30px auto;
+            max-width: 700px;
+        }
+
+        .guarantee-box h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        .guarantee-box .guarantee-badge {
+            display: inline-block;
+            background: var(--accent-green);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+
+        .offer-box {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 100%);
+            color: var(--text-light);
+            padding: 50px 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .offer-box .original-price {
+            font-size: 1.4em;
+            text-decoration: line-through;
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+
+        .offer-box .final-price {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5em;
+            font-weight: 700;
+            color: var(--accent-yellow);
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .offer-box .price-description {
+            font-size: 1.2em;
+            margin-bottom: 25px;
+        }
+
+        .offer-box .cta-button {
+            margin-top: 20px;
+            font-size: 1.3em;
+            padding: 20px 50px;
+        }
+
+        .final-cta-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--bg-white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+
+        .final-cta-section h2 {
+            color: var(--primary-dark);
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        .final-cta-section p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--text-gray);
+            font-size: 0.9em;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+            header .subheadline {
+                font-size: 1.2em;
+            }
+            .section h2 {
+                font-size: 1.8em;
+            }
+            .benefits-grid, .method-arte, .bonus-grid, .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            .offer-box .final-price {
+                font-size: 2.8em;
+            }
+            .cta-button {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            header .subheadline {
+                font-size: 1em;
+            }
+            .section h2 {
+                font-size: 1.5em;
+            }
+            .offer-box .final-price {
+                font-size: 2.2em;
+            }
+            .section, header {
+                padding: 30px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADLINE DE IMPACTO -->
+        <header>
+            <div class="content">
+                <div class="badge-top">✓ APROVADO ATS</div>
+                <h1>Pare de Enviar Currículos Ignorados:</h1>
+                <p class="subheadline">Descubra como passar pelo robô das empresas e chegar ao RECRUTADOR REAL usando Inteligência Artificial.</p>
+                <p class="promise">Aprenda o método que já ajudou centenas de profissionais a conquistar a vaga dos sonhos, mesmo sem experiência com IA.</p>
+                <a href="#oferta" class="cta-button">QUERO MEU CURRÍCULO IRRESISTÍVEL AGORA!</a>
+            </div>
+        </header>
+
+        <!-- SEÇÃO DE IDENTIFICAÇÃO -->
+        <section class="section">
+            <h2>Você se Identifica com Isso?</h2>
+            <p>Você passa horas pesquisando vagas, personalizando seu currículo, e envia... **e nada acontece.**</p>
+            <ul class="problem-list">
+                <li>Você envia dezenas de currículos e nunca recebe uma resposta, nem mesmo um 
+e-mail de "recebemos seu currículo"?</li>
+                <li>Você sente que seu currículo cai em um **buraco negro** e nunca é visto por um ser humano?</li>
+                <li>As vagas dos seus sonhos são fechadas rapidamente, e você fica se perguntando **o que está fazendo de errado**?</li>
+                <li>Você tem as qualificações, a experiência, mas parece que **ninguém te dá uma chance**?</li>
+            </ul>
+            <p>Se você respondeu sim a alguma dessas perguntas, saiba que **o problema não é você.**</p>
+            <p>O problema é um sistema invisível que está barrando seu acesso às melhores oportunidades.</p>
+        </section>
+
+        <!-- REVELAÇÃO DO PROBLEMA -->
+        <section class="section">
+            <h2>A Verdade Chocante: Seu Currículo Não Chega ao Recrutador!</h2>
+            <p>Em 2026, o processo de recrutamento mudou drasticamente. Hoje, antes de qualquer recrutador humano sequer olhar para o seu currículo, ele passa por um **robô de triagem automatizado: o ATS (Applicant Tracking System).**</p>
+            <div class="highlight-box">
+                <strong>70% a 75% dos currículos são eliminados pelo ATS</strong> antes mesmo de um olho humano vê-los. Não importa o quão qualificado você seja, se seu currículo não "fala a língua" do robô, ele é descartado em segundos.
+            </div>
+            <p>É como tentar passar por uma porta trancada com a chave errada. Você tem o potencial, mas não tem a ferramenta certa para abrir a porta da oportunidade.</p>
+        </section>
+
+        <!-- APRESENTAÇÃO DA SOLUÇÃO -->
+        <section class="section">
+            <h2>A Solução Definitiva: Currículos Irresistíveis com IA</h2>
+            <p>E se você pudesse não apenas passar pelo robô, mas fazer com que ele te **selecionasse ativamente** para as melhores vagas? E se seu currículo brilhasse tanto para o ATS quanto para o recrutador humano?</p>
+            <p>Apresentamos o **"Currículos Irresistíveis com IA: Método Dominância ATS™"**.</p>
+            <p>Este é o guia completo que vai te ensinar a:</p>
+            <ul class="solution-list">
+                <li>**Usar a Inteligência Artificial** (mesmo que você seja iniciante) para otimizar cada detalhe do seu currículo.</li>
+                <li>**Decodificar as palavras-chave** que o ATS busca em cada vaga e inseri-las estrategicamente.</li>
+                <li>**Estruturar sua experiência profissional** de forma que o robô e o recrutador entendam seu valor instantaneamente.</li>
+                <li>**Aumentar drasticamente suas chances** de passar pelos filtros automáticos e ser convidado para entrevistas.</li>
+            </ul>
+            <p>Chega de ser invisível. É hora de dominar o jogo da recolocação profissional.</p>
+        </section>
+
+        <!-- APRESENTAÇÃO DO MÉTODO -->
+        <section class="section">
+            <h2>O Método A.R.T.E.™: Seu Caminho para a Vaga dos Sonhos</h2>
+            <p>Desenvolvemos um sistema simples, mas poderoso, que qualquer pessoa pode aplicar para criar currículos que o ATS ama e os recrutadores não conseguem ignorar.</p>
+            <div class="method-arte">
+                <div class="arte-step">
+                    <h4>A — Análise da Vaga</h4>
+                    <p>Aprenda a desmembrar a descrição da vaga, identificar as palavras-chave essenciais e entender o perfil ideal que o ATS está programado para buscar.</p>
+                </div>
+                <div class="arte-step">
+                    <h4>R — Reestruturação Estratégica</h4>
+                    <p>Reorganize seu currículo com base na análise, utilizando uma estrutura que o robô consegue ler e pontuar com facilidade, sem perder a essência humana.</p>
+                </div>
+                <div class="arte-step">
+                    <h4>T — Técnicas de Otimização</h4>
+                    <p>Aplique prompts de IA e técnicas avançadas de copywriting para otimizar cada frase, garantindo que seu currículo seja um ímã de atenção para o ATS e o recrutador.</p>
+                </div>
+                <div class="arte-step">
+                    <h4>E — Entrega do Currículo Otimizado</h4>
+                    <p>Saiba o formato ideal para enviar seu currículo, como fazer o follow-up estratégico e como se preparar para a entrevista que você finalmente vai conseguir.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- O QUE A PESSOA VAI APRENDER -->
+        <section class="section">
+            <h2>Com o "Currículos Irresistíveis com IA", Você Vai Aprender:</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h4>Como transformar qualquer currículo fraco em um currículo profissional</h4>
+                    <p>Mesmo que você esteja começando do zero ou mudando de carreira.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Como usar a Inteligência Artificial gratuitamente para otimizar seu currículo</h4>
+                    <p>Descubra as ferramentas certas e os prompts exatos para fazer a IA trabalhar para você.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>O segredo para passar pelos robôs ATS sem ser barrado</h4>
+                    <p>As estratégias de formatação e conteúdo que garantem sua aprovação nos sistemas de triagem.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Como chamar a atenção dos recrutadores humanos em apenas 6 segundos</h4>
+                    <p>Aprenda a psicologia por trás da leitura de currículos e como se destacar.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Aumentar em até 3x suas chances de ser chamado para entrevistas</h4>
+                    <p>Comprovado por centenas de alunos que aplicaram o Método A.R.T.E.™.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Economizar tempo e dinheiro na busca por emprego</h4>
+                    <p>Pare de gastar com consultorias caras e tenha o controle do seu futuro profissional.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BÔNUS DO PRODUTO -->
+        <section class="bonus-section">
+            <h2>E Não Para Por Aí: Receba Bônus Exclusivos!</h2>
+            <p>Para garantir que você tenha todas as ferramentas para dominar o mercado de trabalho, incluímos bônus que valem mais do que o próprio eBook!</p>
+            <div class="bonus-grid">
+                <div class="bonus-card">
+                    <h4>🎁 Bônus 1: Biblioteca com 150 Prompts de IA</h4>
+                    <p>Um arsenal de comandos prontos para você usar com qualquer IA e otimizar seu currículo para qualquer vaga. **Valor Percebido: R$ 197,00**</p>
+                </div>
+                <div class="bonus-card">
+                    <h4>🎁 Bônus 2: 5 Templates de Currículo Editáveis (DOCX)</h4>
+                    <p>Modelos profissionais 100% ATS-friendly, prontos para você preencher e impressionar. **Valor Percebido: R$ 97,00**</p>
+                </div>
+                <div class="bonus-card">
+                    <h4>🎁 Bônus 3: Checklist ATS de 25 Pontos</h4>
+                    <p>Um guia prático para você validar seu currículo antes de enviar e garantir que ele passe pelo robô. **Valor Percebido: R$ 47,00**</p>
+                </div>
+                <div class="bonus-card">
+                    <h4>🎁 Bônus 4: Planilha Rastreadora de Vagas</h4>
+                    <p>Organize suas candidaturas, follow-ups e resultados para ter controle total da sua busca. **Valor Percebido: R$ 67,00**</p>
+                </div>
+            </div>
+            <p class="total-value">Valor Total dos Bônus: Mais de R$ 400,00!</p>
+            <p style="font-size: 1.2em; margin-top: 20px;">Mas você leva tudo isso hoje, por um preço que você não vai acreditar.</p>
+        </section>
+
+        <!-- PROVA SOCIAL -->
+        <section class="section">
+            <h2>Quem Já Aplicou o Método e Conquistou a Vaga</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    "Eu estava há 6 meses desempregada, enviando currículo para tudo que é lado e nada. Depois de aplicar o Método A.R.T.E.™, em 2 semanas recebi 3 convites para entrevista e hoje estou empregada! É inacreditável!"
+                    <span class="author">— Juliana S., Analista de Marketing</span>
+                </div>
+                <div class="testimonial-card">
+                    "Sempre achei que meu currículo era bom, mas nunca passava do ATS. Com os prompts de IA, consegui otimizar meu perfil de forma cirúrgica. Fui chamado para uma entrevista na empresa dos meus sonhos!"
+                    <span class="author">— Rafael M., Desenvolvedor Full Stack</span>
+                </div>
+                <div class="testimonial-card">
+                    "O checklist ATS foi um divisor de águas. Descobri erros bobos que eu cometia e que me barravam. Agora, meu currículo é aprovado em 90% das vezes. Recomendo demais!"
+                    <span class="author">— Carla P., Gerente de Projetos</span>
+                </div>
+                <div class="testimonial-card">
+                    "A planilha rastreadora me deu uma visão clara do meu processo. Parei de me sentir perdida e comecei a agir com estratégia. Consegui minha recolocação em 30 dias!"
+                    <span class="author">— Fernando G., Consultor de Vendas</span>
+                </div>
+                <div class="testimonial-card">
+                    "O mini curso em vídeo do Pacote Dominância Total é sensacional! Me preparou para a entrevista com IA de uma forma que eu nunca imaginei. Consegui a vaga!"
+                    <span class="author">— Bruna L., Especialista em RH</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUEBRA DE OBJEÇÕES -->
+        <section class="objection-section">
+            <h2>Dúvidas Comuns (e Nossas Respostas)</h2>
+            <div class="objection-item">
+                <h4>Funciona para qualquer profissão ou nível de experiência?</h4>
+                <p>Sim! O Método A.R.T.E.™ é universal. Ele ensina a lógica por trás do ATS e da IA, que se aplica a qualquer área, desde o primeiro emprego até cargos de alta gerência. Os prompts são adaptáveis e os templates são flexíveis.</p>
+            </div>
+            <div class="objection-item">
+                <h4>Preciso ter conhecimento avançado em IA ou tecnologia?</h4>
+                <p>Absolutamente não! O guia foi feito para iniciantes. Explicamos tudo passo a passo, sem jargões. Se você sabe usar um computador e consegue digitar, você consegue aplicar o método. A IA fará o trabalho pesado por você.</p>
+            </div>
+            <div class="objection-item">
+                <h4>E se eu nunca fiz um currículo profissional antes?</h4>
+                <p>Perfeito! Este é o melhor ponto de partida. Você vai aprender a fazer certo desde o início, evitando os erros que a maioria comete. Os templates e prompts te darão uma base sólida e profissional.</p>
+            </div>
+            <div class="objection-item">
+                <h4>Quanto tempo levo para ver resultados?</h4>
+                <p>Muitos alunos relatam começar a receber respostas em 7 a 15 dias após aplicar o método. No entanto, a velocidade depende da sua dedicação e da sua área. O Plano de Ação de 30 Dias no eBook te dará um cronograma claro para acelerar seus resultados.</p>
+            </div>
+            <div class="objection-item">
+                <h4>Este produto é para mim se eu já estou empregado, mas quero uma recolocação?</h4>
+                <p>Com certeza! O método é ideal para quem busca uma transição de carreira ou uma promoção. Ele te dará as ferramentas para se posicionar estrategicamente e conquistar vagas melhores.</p>
+            </div>
+        </section>
+
+        <!-- GARANTIA -->
+        <section class="section">
+            <div class="guarantee-box">
+                <h3>🛡️ Sua Satisfação é 100% Garantida!</h3>
+                <p>Temos tanta confiança no Método A.R.T.E.™ que oferecemos uma **Garantia Incondicional de 7 Dias.**</p>
+                <p>Se, por qualquer motivo, você não estiver completamente satisfeito com o conteúdo, basta nos enviar um e-mail dentro de 7 dias após a compra e devolveremos cada centavo do seu investimento. Sem perguntas, sem burocracia.</p>
+                <p>Você não tem absolutamente nada a perder. Apenas uma carreira transformada a ganhar.</p>
+                <div class="guarantee-badge">✓ Risco Zero para Você</div>
+            </div>
+        </section>
+
+        <!-- OFERTA FINAL -->
+        <section class="offer-box" id="oferta">
+            <h2>Sua Oportunidade de Ouro Começa Agora!</h2>
+            <p class="original-price">De: R$ <s>127,00</s></p>
+            <p class="final-price">Por Apenas: R$ 67,00</p>
+            <p class="price-description">Acesso Imediato ao eBook + Todos os Bônus Exclusivos!</p>
+            <p style="font-size: 1.1em; margin-bottom: 20px;">Isso é menos do que um jantar fora para ter em mãos o segredo que vai destravar sua carreira.</p>
+            <a href="#" class="cta-button">SIM! QUERO MEU CURRÍCULO IRRESISTÍVEL AGORA!</a>
+            <p style="font-size: 0.9em; margin-top: 15px; opacity: 0.8;">Pagamento seguro via Hotmart. Acesso instantâneo após a confirmação.</p>
+        </section>
+
+        <!-- CHAMADA FINAL PARA AÇÃO -->
+        <section class="final-cta-section">
+            <h2>Não Deixe Sua Carreira ao Acaso.</h2>
+            <p>A cada minuto que você hesita, dezenas de vagas são preenchidas por quem já domina o ATS. Não seja mais um currículo ignorado.</p>
+            <p style="font-size: 1.2em; font-weight: bold; color: var(--primary-dark);">Comece agora a criar um currículo que passa pelos robôs e chega ao recrutador.</p>
+            <a href="#" class="cta-button">QUERO DOMINAR O ATS E CONQUISTAR MINHA VAGA!</a>
+        </section>
+
+        <!-- Rodapé -->
+        <footer>
+            <p>© 2026 Método Dominância ATS™. Todos os direitos reservados.</p>
+            <p>Material licenciado para uso pessoal. Proibida reprodução ou redistribuição sem autorização.</p>
+            <p><a href="#" style="color: var(--primary-blue); text-decoration: none;">Política de Privacidade</a> | <a href="#" style="color: var(--primary-blue); text-decoration: none;">Termos de Uso</a></p>
+        </footer>
+    </div>
+</body>
+</html>
